@@ -12,6 +12,8 @@
    --black: #000;
    --white: #fff;
    --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+   --border-grey: 1px solid var(--grey-light-2);
+   --shadow-dark-2: 0 2rem 5rem rgba(0, 0, 0, 0.06);
 }
 
 *,
@@ -38,5 +40,5 @@ body {
       var(--color-primary-dark)
    );
    background-size: cover;
-   min-height: 100vh;
+   // min-height: 100vh;
 }
