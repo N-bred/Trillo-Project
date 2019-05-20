@@ -60,6 +60,9 @@
 
          <div class="content">
             <nav class="sidebar">
+               <div class="hamburger">
+                  &#9776;
+               </div>
                <ul class="side-nav">
                   <li class="side-nav__item side-nav__item--active">
                      <a href="#" class="side-nav__link">
@@ -177,7 +180,7 @@
                         Mollitia aut est cumque fugiat voluptatibus iusto?
                      </p>
                      <ul class="list">
-                        <li class="list__item">Close to te bitch</li>
+                        <li class="list__item">Close to the beach</li>
                         <li class="list__item">Breakfast included</li>
                         <li class="list__item">Free airport shuffle</li>
                         <li class="list__item">Free wifi in all rooms</li>
@@ -216,11 +219,75 @@
                   </div>
 
                   <div class="user-reviews">
-                     User R
+                     <figure class="review">
+                        <blockquote class="review__text">
+                           Lorem ipsum dolor sit amet consectetur adipisicing
+                           elit. Odio, repudiandae expedita? Sunt.
+                        </blockquote>
+                        <figcaption class="review__user">
+                           <img
+                              src="/img/user-1.jpg"
+                              alt="User"
+                              class="review__photo"
+                           />
+                           <div class="review__user-box">
+                              <p class="review__user-name">Nick Smith</p>
+                              <p class="review__user-date">
+                                 Feb 23rd, 2019
+                              </p>
+                           </div>
+                           <div class="review__rating">
+                              9
+                           </div>
+                        </figcaption>
+                     </figure>
+
+                     <figure class="review">
+                        <blockquote class="review__text">
+                           Lorem ipsum dolor sit amet consectetur adipisicing
+                           elit.
+                        </blockquote>
+                        <figcaption class="review__user">
+                           <img
+                              src="/img/user-2.jpg"
+                              alt="User"
+                              class="review__photo"
+                           />
+                           <div class="review__user-box">
+                              <p class="review__user-name">Mary Robins</p>
+                              <p class="review__user-date">
+                                 May 11th, 2019
+                              </p>
+                           </div>
+                           <div class="review__rating">
+                              8.4
+                           </div>
+                        </figcaption>
+                     </figure>
+
+                     <button class="btn-inline">
+                        Show all
+                        <span class="btn-inline__arrow">&rarr;</span>
+                     </button>
                   </div>
+               </div>
+               <div class="cta">
+                  <h2 class="cta__book-now">
+                     Good news! We have 4 free rooms for your selected dates
+                  </h2>
+                  <button class="btn">
+                     <span class="btn__visible">Book Now!</span>
+                     <span class="btn__invisible">Only 4 rooms left</span>
+                  </button>
                </div>
             </main>
          </div>
       </div>
+
+      <script>
+         document.querySelector('.hamburger').addEventListener('click', () => {
+            document.querySelector('.side-nav').classList.toggle('show-flex');
+         });
+      </script>
    </body>
 </html>

@@ -35,6 +35,7 @@
 }
 
 .detail {
+   font-size: 1.4rem;
    display: flex;
    padding: 4.5rem;
    background: var(--grey-light-1);
@@ -47,10 +48,140 @@
    padding: 3rem;
    flex: 0 0 60%;
    margin-right: 4.5rem;
-   font-size: 1.4rem;
 }
 
 .user-reviews {
-   background: lightcyan;
    flex: 1;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+// Media
+
+@media screen and (max-width: $bp-largest) {
+   .container {
+      margin: 0 auto;
+      max-width: 100%;
+      width: 100%;
+   }
+}
+
+@media screen and (max-width: $bp-large) {
+   html {
+      font-size: 50%;
+   }
+}
+
+@media screen and (max-width: $bp-medium) {
+   .content {
+      flex-direction: column;
+   }
+
+   .side-nav {
+      display: flex;
+      margin: 0 !important;
+      // justify-content: space-between;
+
+      &__item {
+         margin-bottom: 0 !important;
+         flex: 1;
+      }
+
+      &__link:link,
+      &__link:visited {
+         justify-content: center;
+      }
+   }
+
+   .legal {
+      display: none;
+   }
+
+   .detail {
+      padding: 3rem;
+   }
+
+   .description {
+      padding: 2rem;
+      margin-right: 3rem;
+   }
+
+   .review {
+      padding: 2rem;
+      margin-bottom: 3rem;
+   }
+
+   .cta {
+      padding: 2.5rem 0;
+   }
+}
+
+@media screen and (max-width: $bp-small) {
+   .detail {
+      flex-direction: column;
+   }
+
+   .description {
+      margin-right: 0;
+      margin-bottom: 3rem;
+   }
+
+   .side-nav {
+      &__link {
+         flex-direction: column;
+      }
+
+      &__icon {
+         margin-right: 0 !important;
+         margin-bottom: 0.7rem !important;
+      }
+   }
+
+   .overview {
+      &__heading {
+         font-size: 1.8rem !important;
+      }
+
+      &__rating {
+         padding: 0 1.5rem !important;
+      }
+
+      &__rating-average {
+         font-size: 1.8rem !important;
+      }
+      &__rating-count {
+         font-size: 0.5rem !important;
+      }
+   }
+
+   .review__photo {
+      height: auto !important;
+   }
+}
+
+@media screen and (max-width: $bp-extra-small) {
+   .user-nav__user {
+      display: none !important;
+   }
+
+   .overview {
+      &__rating {
+         display: none !important;
+      }
+   }
+
+   .side-nav {
+      display: none;
+      margin: 0 !important;
+      flex-direction: column;
+   }
+
+   .hamburger {
+      display: block !important;
+      font-size: 3rem;
+      text-align: center;
+      color: var(--white);
+      cursor: pointer;
+   }
 }
